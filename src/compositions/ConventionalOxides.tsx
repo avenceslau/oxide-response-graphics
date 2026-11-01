@@ -51,16 +51,16 @@ export const ConventionalOxides: React.FC<Props> = ({showTitle = true}) => {
               strokeLinejoin="round"
             />
             <line
-              x1="245"
+              x1="645"
               y1={205 + index * 48}
-              x2="320"
+              x2="720"
               y2={205 + index * 48}
               stroke={color}
               strokeWidth="7"
               strokeLinecap="round"
             />
             <text
-              x="340"
+              x="740"
               y={218 + index * 48}
               fill={INK}
               fontFamily={FONT_FAMILY}
