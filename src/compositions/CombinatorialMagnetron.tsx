@@ -50,7 +50,6 @@ type BeamProps = {
   sourceX: number;
   targetX: number;
   index: number;
-  color: string;
   progress: number;
   frame: number;
 };
@@ -59,7 +58,6 @@ const DepositionBeam: React.FC<BeamProps> = ({
   sourceX,
   targetX,
   index,
-  color,
   progress,
   frame,
 }) => {
@@ -76,24 +74,6 @@ const DepositionBeam: React.FC<BeamProps> = ({
             L ${targetX - 91} ${bottom} Z`}
         fill={`url(#beam-${index})`}
       />
-      {Array.from({length: 5}, (_, particle) => {
-        const phase = ((frame * 0.009 + particle / 5 + index * 0.17) % 1 + 1) % 1;
-        const y = top + phase * (bottom - top);
-        const centerX = sourceX + phase * (targetX - sourceX);
-        const spread = phase * 58;
-        const x = centerX + Math.sin(particle * 2.7 + index) * spread;
-
-        return (
-          <circle
-            key={particle}
-            cx={x}
-            cy={y}
-            r={3 + phase * 3}
-            fill={color}
-            opacity={0.25 + phase * 0.35}
-          />
-        );
-      })}
     </g>
   );
 };
@@ -179,7 +159,6 @@ export const CombinatorialMagnetron: React.FC<CompositionProps> = ({
               sourceX={SOURCE_X[index]}
               targetX={FILM_X[index] + 97.5}
               index={index}
-              color={color}
               progress={beamProgress}
               frame={frame}
             />
