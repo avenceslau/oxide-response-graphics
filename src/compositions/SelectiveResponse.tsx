@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
-import {INK, SERIES} from '../theme';
+import {FONT_FAMILY, INK, SERIES} from '../theme';
 
 type Props = {
   showTitle?: boolean;
@@ -30,7 +30,7 @@ export const SelectiveResponse: React.FC<Props> = ({showTitle = true}) => {
             y="92"
             textAnchor="middle"
             fill={INK}
-            fontFamily="Inter, Arial, Helvetica, sans-serif"
+            fontFamily={FONT_FAMILY}
             fontSize="55"
             fontWeight="800"
           >
@@ -57,7 +57,7 @@ export const SelectiveResponse: React.FC<Props> = ({showTitle = true}) => {
           y="1005"
           textAnchor="end"
           fill={INK}
-          fontFamily="Inter, Arial, Helvetica, sans-serif"
+          fontFamily={FONT_FAMILY}
           fontSize="52"
         >
           Time
@@ -67,7 +67,7 @@ export const SelectiveResponse: React.FC<Props> = ({showTitle = true}) => {
           y="540"
           textAnchor="middle"
           fill={INK}
-          fontFamily="Inter, Arial, Helvetica, sans-serif"
+          fontFamily={FONT_FAMILY}
           fontSize="52"
           transform="rotate(-90 52 540)"
         >

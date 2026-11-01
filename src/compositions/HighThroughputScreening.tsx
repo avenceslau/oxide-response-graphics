@@ -6,7 +6,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from 'remotion';
-import {SERIES_COLORS} from '../theme';
+import {FONT_FAMILY, SERIES_COLORS} from '../theme';
 
 const GRID = [
   [0, 0, 0, 1, 1, 1],
@@ -67,7 +67,7 @@ export const HighThroughputScreening: React.FC<Props> = ({
     <AbsoluteFill
       style={{
         backgroundColor: '#ffffff',
-        fontFamily: 'Inter, Arial, Helvetica, sans-serif',
+        fontFamily: FONT_FAMILY,
       }}
     >
       <svg viewBox="0 0 1080 1080" width="100%" height="100%">

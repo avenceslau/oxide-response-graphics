@@ -13,3 +13,4 @@ export const SERIES = [
 ] as const;
 
 export const INK = '#17232d';
+export const FONT_FAMILY = 'Calibri, Arial, sans-serif';

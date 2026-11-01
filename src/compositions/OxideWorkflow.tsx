@@ -4,7 +4,7 @@ import {CombinatorialMagnetron} from './CombinatorialMagnetron';
 import {ConventionalOxides} from './ConventionalOxides';
 import {HighThroughputScreening} from './HighThroughputScreening';
 import {SelectiveResponse} from './SelectiveResponse';
-import {INK} from '../theme';
+import {FONT_FAMILY, INK} from '../theme';
 
 const PANEL_SIZE = 565;
 
@@ -46,7 +46,7 @@ export const OxideWorkflow: React.FC = () => {
     <AbsoluteFill
       style={{
         backgroundColor: '#ffffff',
-        fontFamily: 'Inter, Arial, Helvetica, sans-serif',
+        fontFamily: FONT_FAMILY,
       }}
     >
       {PANELS.map(({title, x, top, content}, index) => (

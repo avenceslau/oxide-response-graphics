@@ -6,7 +6,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from 'remotion';
-import {SERIES} from '../theme';
+import {FONT_FAMILY, SERIES} from '../theme';
 
 const SOURCE_X = [175, 418, 662, 905];
 const FILM_X = [155, 350, 545, 740];
@@ -122,7 +122,7 @@ export const CombinatorialMagnetron: React.FC<CompositionProps> = ({
     <AbsoluteFill
       style={{
         backgroundColor: '#ffffff',
-        fontFamily: 'Inter, Arial, Helvetica, sans-serif',
+        fontFamily: FONT_FAMILY,
       }}
     >
       <svg viewBox="0 0 1080 1080" width="100%" height="100%">
