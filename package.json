@@ -1,0 +1,29 @@
+{
+  "name": "oxide-response-graphics",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "remotion studio src/index.ts",
+    "render": "pnpm run render:magnetron && pnpm run render:screening",
+    "still": "pnpm run still:conventional && pnpm run still:magnetron && pnpm run still:screening && pnpm run still:selective && pnpm run still:combined",
+    "render:magnetron": "remotion render src/index.ts CombinatorialMagnetron out/combinatorial-magnetron.mp4",
+    "render:screening": "remotion render src/index.ts HighThroughputScreening out/high-throughput-screening.mp4",
+    "still:conventional": "remotion still src/index.ts ConventionalOxides out/conventional-oxides.png",
+    "still:magnetron": "remotion still src/index.ts CombinatorialMagnetron out/combinatorial-magnetron.png --frame=140",
+    "still:screening": "remotion still src/index.ts HighThroughputScreening out/high-throughput-screening.png --frame=120",
+    "still:selective": "remotion still src/index.ts SelectiveResponse out/selective-response.png",
+    "still:combined": "remotion still src/index.ts OxideWorkflow out/oxide-workflow.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "remotion": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest"
+  },
+  "packageManager": "pnpm@11.17.0"
+}
